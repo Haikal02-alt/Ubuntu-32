@@ -1,5 +1,5 @@
 1 Download debian bookworm which is still have 32 bit https://cdimage.debian.org/mirror/cdimage/archive/12.1.0/i386/iso-cd/
-2 Setup debian 13 32 bit
+2 Setup debian 12 32 bit
 3 When running tasksel do not select gnome and debian desktop environment or other desktop environment that listed on tasksel because its heavy just standard system utility only instead
 4 After install run login as root first then apt install sudo then nano /etc/sudoers then add yourusername  ALL=(ALL:ALL) ALL then ctrl x y enter
 5 Exit root then login as yourusername
