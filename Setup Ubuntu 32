@@ -1,0 +1,55 @@
+1 Download debian bookworm which is still have 32 bit https://cdimage.debian.org/mirror/cdimage/archive/12.1.0/i386/iso-cd/
+2 Setup debian 13 32 bit
+3 When running tasksel do not select gnome and debian desktop environment or other desktop environment that listed on tasksel because its heavy just standard system utility only instead
+4 After install run login as root first then apt install sudo then nano /etc/sudoers then add yourusername  ALL=(ALL:ALL) ALL then ctrl x y enter
+5 Exit root then login as yourusername
+6 Run sudo apt install links then links https://github.com/Haikal02-alt/Ubuntu-32 then find ubuntu-logo-text.png then name it to ubuntu-logo-text.png and find ubuntu-logo-text-dark.png then name it to ubuntu-logo-text=dark.png
+7 then ls then sudo mv /home/yourusername/ubuntu-logo-text.png /usr/share/pixmaps then sudo mv /home/yourusername/ubuntu-logo-text-dark.png /usr/share/pixmaps
+8 then sudo nano /etc/os-release
+then change
+
+PRETTY_NAME="Debian GNU/Linux 12 (bookworm)"
+NAME="Debian GNU/Linux"
+VERSION_ID="12"
+VERSION="12 (bookworm)"
+VERSION_CODENAME=bookworm
+ID=debian
+and its HOME_URL SUPPORT_URL And BUG_REPORT_URL
+
+To
+
+PRETTY_NAME="Ubuntu 24.04.4 LTS"
+NAME="Ubuntu"
+VERSION_ID="24.04"
+VERSION="24.04.4 LTS (Noble Numbat)"
+VERSION_CODENAME=noble
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=noble
+
+Then sudo apt-mark hold base-files
+Then sudo apt-mark hold desktop-base
+Then sudo apt update && sudo apt upgrade -y
+
+9 Then run sudo nano ~/.config/neofetch/config.conf
+
+Locate the ASCII section by searching for the line starting with ascii_distro (usually set to "auto").
+Update the value to "ubuntu"
+
+ascii_distro="ubuntu"
+
+then ctrl x y enter
+
+10 Run sudo nano /etc/issue then change Debian GNU/Linux 12 \n \1 To Ubuntu 24.04.4 LTS \n \l
+
+Run sudo nano /etc/issue.net then change Debian GNU/Linux 12 to Ubuntu 24.04.4 LTS
+
+Run sudo rm /etc/motd then sudo reboot
+
+11 Then sudo nano /etc/default/grub then change GRUB_DISTRIBUTOR To GRUB_DISTRIBUTOR="Ubuntu" Then Change GRUB_TIMEOUT=5 To GRUB_TIMEOUT=0
+
+Then sudo update-grub
