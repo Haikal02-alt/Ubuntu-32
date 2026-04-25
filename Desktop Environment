@@ -1,0 +1,5 @@
+If you want to install Desktop Environment on Ubuntu 32 it is recommended to find lightweight desktop environment like xfce mate lxqt lxde etc or lightweight window manager like icewm twm windowmaker fluxbox openbox etc
+
+You can install with sudo apt install
+
+But first you need to install lomiri-wallpaper with sudo apt install lomiri-wallpapers
